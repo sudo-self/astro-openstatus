@@ -1,4 +1,4 @@
-# Astro Status Page by OpenStatus 🔭
+# Astro Status Page by OpenStatus
 
 [OpenStatus](https://jesse.openstatus.dev)
 
