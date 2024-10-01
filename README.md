@@ -1,6 +1,6 @@
 # Astro Status Page by OpenStatus 🔭
 
-Built by [OpenStatus](https://www.openstatus.dev)
+[OpenStatus](https://jesse.openstatus.dev)
 
 
 ## Demo 🚀
