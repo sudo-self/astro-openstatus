@@ -29,6 +29,9 @@ importers:
       astro:
         specifier: ^4.10.3
         version: 4.10.3(@types/node@20.14.6)(typescript@5.4.5)
+      astro-theme-toggle:
+        specifier: ^0.3.4
+        version: 0.3.4
       react:
         specifier: 18.3.1
         version: 18.3.1
@@ -1334,6 +1337,9 @@ packages:
 
   as-table@1.0.55:
     resolution: {integrity: sha512-xvsWESUJn0JN421Xb9MQw6AsMHRCUknCe0Wjlxvjud80mU4E6hQf1A6NzQKcYNmYw62MfzEtXc+badstZP3JpQ==}
+
+  astro-theme-toggle@0.3.4:
+    resolution: {integrity: sha512-yzVMGv76ajT+Gj80tDTUXQRp84IPVsEf9t4oWIeWMSCqOS9J1kctrbFDZTgrzyHFP2x7GQIL01Ye8GC5B1zAmw==}
 
   astro@4.10.3:
     resolution: {integrity: sha512-TWCJM+Vg+y0UoEz/H75rfp/u2N8yxeQQ2UrU9+fMcbjlzQJtGGDq3ApdundqPZgAuCryRuJnrKytStMZCFnlvQ==}
@@ -4157,6 +4163,8 @@ snapshots:
   as-table@1.0.55:
     dependencies:
       printable-characters: 1.0.42
+
+  astro-theme-toggle@0.3.4: {}
 
   astro@4.10.3(@types/node@20.14.6)(typescript@5.4.5):
     dependencies:

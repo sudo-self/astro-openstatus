@@ -4,14 +4,21 @@ import { monitorsSchema } from "../utils/models.js";
 import StatusBar from "../components/status-bar.astro";
 import { ThemeScript } from 'astro-theme-toggle';
 
-const env = Astro.env;
+// Correct way to access environment variables
+const env = import.meta.env;
+
+// Define a type for the expected structure of monitor
+type Monitor = {
+  id: number;
+  name: string; // Add other relevant properties from your schema
+};
 
 // Fetch the data from the API
-let result = [];
+let result: Monitor[] = []; // Explicitly type the result variable
 try {
   const response = await fetch("https://api.openstatus.dev/v1/monitor", {
     headers: {
-      "x-openstatus-key": import.meta.env.API_KEY, 
+      "x-openstatus-key": env.API_KEY, // Use `env` correctly
     },
   });
 
@@ -23,13 +30,12 @@ try {
     
     // Filter by specific monitor IDs
     const monitorIds = [2026, 2027, 2028];
-    result = r.filter((m) => monitorIds.includes(m.id));
+    result = r.filter((m: Monitor) => monitorIds.includes(m.id)); // Ensure type is consistent
   }
 } catch (error) {
   console.error("Failed to fetch monitor data:", error);
 }
 ---
-
 
 <html lang="en">
   <head>
@@ -111,3 +117,4 @@ try {
     </style>
   </body>
 </html>
+
